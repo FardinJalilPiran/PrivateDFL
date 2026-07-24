@@ -1,0 +1,47 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the paper below."
+title: "PrivateDFL"
+abstract: >-
+  Reference implementation of PrivateDFL, a serverless decentralized federated
+  learning framework combining hyperdimensional computing with an explainable
+  adaptive differential privacy noise accountant.
+authors:
+  - family-names: "Jalil Piran"
+    given-names: "Fardin"
+    affiliation: "University of Connecticut"
+  - family-names: "Chen"
+    given-names: "Zhiling"
+    affiliation: "University of Connecticut"
+  - family-names: "Zhang"
+    given-names: "Yang"
+    affiliation: "University of Connecticut"
+  - family-names: "Zhou"
+    given-names: "Qianyu"
+    affiliation: "University of Connecticut"
+  - family-names: "Tang"
+    given-names: "Jiong"
+    affiliation: "University of Connecticut"
+  - family-names: "Imani"
+    given-names: "Farhad"
+    affiliation: "University of Connecticut"
+license: MIT
+repository-code: "https://github.com/FardinJalilPiran/PrivateDFL"
+preferred-citation:
+  type: article
+  title: "Privacy-Preserving Decentralized Federated Learning via Explainable Adaptive Differential Privacy"
+  authors:
+    - family-names: "Jalil Piran"
+      given-names: "Fardin"
+    - family-names: "Chen"
+      given-names: "Zhiling"
+    - family-names: "Zhang"
+      given-names: "Yang"
+    - family-names: "Zhou"
+      given-names: "Qianyu"
+    - family-names: "Tang"
+      given-names: "Jiong"
+    - family-names: "Imani"
+      given-names: "Farhad"
+  journal: "arXiv preprint arXiv:2509.10691"
+  year: 2025
+  url: "https://arxiv.org/abs/2509.10691"

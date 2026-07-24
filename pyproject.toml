@@ -1,0 +1,69 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "privatedfl"
+version = "1.0.2"
+description = "Privacy-preserving decentralized federated learning via explainable adaptive differential privacy"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [
+    { name = "Fardin Jalil Piran", email = "fardin.jalil_piran@uconn.edu" },
+    { name = "Zhiling Chen", email = "zhiling.chen@uconn.edu" },
+    { name = "Yang Zhang", email = "yang.3.zhang@uconn.edu" },
+    { name = "Qianyu Zhou", email = "qianyu.zhou@uconn.edu" },
+    { name = "Jiong Tang", email = "jiong.tang@uconn.edu" },
+    { name = "Farhad Imani", email = "farhad.imani@uconn.edu" },
+]
+keywords = [
+    "decentralized federated learning",
+    "differential privacy",
+    "hyperdimensional computing",
+    "explainable AI",
+    "privacy-preserving machine learning",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "torch>=1.13",
+    "numpy>=1.21",
+    "PyYAML>=6.0",
+]
+
+[project.optional-dependencies]
+plots = ["matplotlib>=3.5"]
+dev = ["pytest>=7.0", "ruff>=0.4", "jupyter>=1.0", "matplotlib>=3.5"]
+all = ["matplotlib>=3.5", "pytest>=7.0", "ruff>=0.4", "jupyter>=1.0"]
+
+[project.urls]
+Homepage = "https://github.com/FardinJalilPiran/PrivateDFL"
+Preprint = "https://arxiv.org/abs/2509.10691"
+
+[project.scripts]
+privatedfl = "privatedfl.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+src = ["src", "tests", "scripts"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B", "SIM"]
+ignore = ["E501"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["B"]

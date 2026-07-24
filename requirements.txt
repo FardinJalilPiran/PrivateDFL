@@ -1,0 +1,8 @@
+# Core runtime dependencies.
+# For everything (plots, tests, linter):  pip install -e ".[all]"
+torch>=1.13
+numpy>=1.21
+PyYAML>=6.0
+
+# Optional, used only by the plotting scripts and the notebook
+matplotlib>=3.5

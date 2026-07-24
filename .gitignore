@@ -1,0 +1,38 @@
+# Experiment outputs are regenerated, never committed
+results/
+*.pt
+*.pth
+*.npz
+
+# The shipped .choir_dat files under Dataset/ ARE tracked on purpose.
+# Ignore anything else that lands there.
+Dataset/*
+!Dataset/*.choir_dat
+!Dataset/README.md
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+env/
+
+# Tooling
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Editors and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

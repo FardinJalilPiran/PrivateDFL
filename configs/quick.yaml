@@ -1,0 +1,23 @@
+# Fast smoke test: small ring, few rounds, small hyperspace.
+# Runs on a laptop CPU in well under a minute.
+dataset: UCIHAR
+partition: non-IID
+classes_per_client: 2
+balance_clients: true    # false reproduces the released split (uneven shard sizes)
+data_root: Dataset
+
+n_clients: 10
+rounds: 3
+local_epochs: 1
+
+dimensions: 500
+similarity: dot
+
+differential_privacy: true
+epsilon: 0.5
+delta0: 0.001
+
+seed: 55
+device: cpu
+output_dir: results
+eval_every: 1

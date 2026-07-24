@@ -1,0 +1,23 @@
+# Non-private baseline: identical settings with DP switched off.
+# Use this to measure what the privacy guarantee costs in accuracy.
+dataset: UCIHAR
+partition: non-IID
+classes_per_client: 2
+balance_clients: true    # false reproduces the released split (uneven shard sizes)
+data_root: Dataset
+
+n_clients: 100
+rounds: 30
+local_epochs: 1
+
+dimensions: 2000
+similarity: dot
+
+differential_privacy: false
+epsilon: 0.5
+delta0: 0.001
+
+seed: 55
+device: auto
+output_dir: results
+eval_every: 1

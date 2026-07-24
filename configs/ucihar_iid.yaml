@@ -1,0 +1,23 @@
+# Paper configuration: UCI-HAR, non-IID, 100 clients in a ring, 30 rounds.
+# Reproduces the setup in the released notebook.
+dataset: UCIHAR
+partition: IID
+classes_per_client: 2
+balance_clients: true    # false reproduces the released split (uneven shard sizes)
+data_root: Dataset
+
+n_clients: 100
+rounds: 30
+local_epochs: 1
+
+dimensions: 2000
+similarity: dot          # "dot" matches the released code; "cosine" follows Eq. (3)
+
+differential_privacy: true
+epsilon: 0.5
+delta0: 0.001
+
+seed: 55
+device: auto
+output_dir: results
+eval_every: 1
